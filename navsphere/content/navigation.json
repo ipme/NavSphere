@@ -6,14 +6,6 @@
       "icon": "Star",
       "items": [
         {
-          "id": "1_3",
-          "title": "Cloudflare",
-          "href": "https://dash.cloudflare.com/",
-          "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
-          "icon": "/assets/images/logos/cloudflar.ico",
-          "enabled": true
-        },
-        {
           "id": "1_4",
           "title": "Google AdSense",
           "href": "https://www.google.com/adsense/",
