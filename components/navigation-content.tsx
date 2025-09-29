@@ -153,6 +153,21 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
               <ModeToggle />
               
               <Link
+                href="https://atzzz.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Home"
+              >
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Store className="h-5 w-5" />
+                </Button>
+              </Link>
+              
+              <Link
                 href="https://t.me/AxRss"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -168,7 +183,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
               </Link>
               
               <Link
-                href="https://youtube/@cnwww"
+                href="https://youtube.com/@cnwww"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
