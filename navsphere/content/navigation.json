@@ -1,15 +1,6 @@
 {
   "navigationItems": [
     {
-      "id": "1",
-      "title": "常用推荐",
-      "icon": "Star",
-      "items": [],
-      "subCategories": [],
-      "description": "",
-      "enabled": true
-    },
-    {
       "id": "9",
       "title": "AI工具包",
       "icon": "Brain",
