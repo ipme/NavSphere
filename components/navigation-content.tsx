@@ -8,11 +8,10 @@ import { Sidebar } from '@/components/sidebar'
 import { SearchBar } from '@/components/search-bar'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Footer } from '@/components/footer'
-import { Github, HelpCircle } from 'lucide-react'
+import { Github, HelpCircle, Menu, Telegram, Youtube } from 'lucide-react'
 import { Button } from "@/registry/new-york/ui/button"
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { Menu } from 'lucide-react'
 
 interface NavigationContentProps {
   navigationData: NavigationData
@@ -23,7 +22,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
 
-  // 修复类型检查和搜索逻辑
+  // 搜索逻辑实现
   const searchResults = useMemo(() => {
     const query = searchQuery.toLowerCase().trim()
     if (!query) return []
@@ -103,6 +102,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
 
   return (
     <div className="flex flex-col sm:flex-row min-h-screen">
+      {/* 桌面端侧边栏 */}
       <div className="hidden sm:block">
         <Sidebar
           navigationData={navigationData}
@@ -111,14 +111,21 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
         />
       </div>
 
-      <div className={cn(
-        "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-all sm:hidden",
-        isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-      )}>
-        <div className={cn(
-          "fixed inset-y-0 right-0 sm:left-0 w-3/4 max-w-xs bg-background shadow-lg transform transition-transform duration-200 ease-in-out",
-          isSidebarOpen ? "translate-x-0" : "translate-x-full sm:-translate-x-full"
-        )}>
+      {/* 移动端侧边栏 */}
+      <div 
+        className={cn(
+          "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-all sm:hidden",
+          isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setIsSidebarOpen(false)}
+      >
+        <div 
+          className={cn(
+            "fixed inset-y-0 right-0 sm:left-0 w-3/4 max-w-xs bg-background shadow-lg transform transition-transform duration-200 ease-in-out",
+            isSidebarOpen ? "translate-x-0" : "translate-x-full sm:-translate-x-full"
+          )}
+          onClick={(e) => e.stopPropagation()}
+        >
           <Sidebar
             navigationData={navigationData}
             siteInfo={siteData}
@@ -127,7 +134,9 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
         </div>
       </div>
 
+      {/* 主内容区域 */}
       <main className="flex-1">
+        {/* 顶部导航栏 */}
         <div className="sticky top-0 bg-background/90 backdrop-blur-sm z-30 px-3 sm:px-6 py-2">
           <div className="flex items-center gap-3">
             <div className="flex-1">
@@ -139,8 +148,10 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                 siteConfig={siteData}
               />
             </div>
+            
             <div className="flex items-center gap-1">
               <ModeToggle />
+              
               <Link
                 href="https://t.me/AxRss"
                 target="_blank"
@@ -155,11 +166,12 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                   <Telegram className="h-5 w-5" />
                 </Button>
               </Link>
+              
               <Link
                 href="https://youtube/@cnwww"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="YouTuBe"
+                aria-label="YouTube"
               >
                 <Button
                   variant="ghost"
@@ -169,6 +181,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                   <Youtube className="h-5 w-5" />
                 </Button>
               </Link>
+              
               <Link
                 href="https://github.com/tianyaxiang/NavSphere"
                 target="_blank"
@@ -183,6 +196,8 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                   <Github className="h-5 w-5" />
                 </Button>
               </Link>
+              
+              {/* 移动端菜单按钮 */}
               <Button
                 variant="ghost"
                 size="icon"
@@ -195,10 +210,15 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
           </div>
         </div>
 
+        {/* 导航内容 */}
         <div className="px-3 sm:px-6 py-3 sm:py-6">
           <div className="space-y-6">
             {navigationData.navigationItems.map((category) => (
-              <section key={category.id} id={category.id} className="scroll-m-16">
+              <section 
+                key={category.id} 
+                id={category.id} 
+                className="scroll-m-16"
+              >
                 <div className="space-y-4">
                   <h2 className="text-base font-medium tracking-tight">
                     {category.title}
@@ -206,13 +226,21 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
 
                   {category.subCategories && category.subCategories.length > 0 ? (
                     category.subCategories.map((subCategory) => (
-                      <div key={subCategory.id} id={subCategory.id} className="space-y-3">
+                      <div 
+                        key={subCategory.id} 
+                        id={subCategory.id} 
+                        className="space-y-3"
+                      >
                         <h3 className="text-sm font-medium text-muted-foreground">
                           {subCategory.title}
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                           {(subCategory.items || []).map((item) => (
-                            <NavigationCard key={item.id} item={item} siteConfig={siteData} />
+                            <NavigationCard 
+                              key={item.id} 
+                              item={item} 
+                              siteConfig={siteData} 
+                            />
                           ))}
                         </div>
                       </div>
@@ -220,7 +248,11 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                       {(category.items || []).map((item) => (
-                        <NavigationCard key={item.id} item={item} siteConfig={siteData} />
+                        <NavigationCard 
+                          key={item.id} 
+                          item={item} 
+                          siteConfig={siteData} 
+                        />
                       ))}
                     </div>
                   )}
@@ -229,6 +261,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
             ))}
           </div>
         </div>
+        
         {/* 页脚 */}
         <Footer siteInfo={siteData} />
       </main>
