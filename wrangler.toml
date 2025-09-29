@@ -8,6 +8,6 @@ GITHUB_CLIENT_ID = "Ov23liy3IQp6wDfdqzEj"
 GITHUB_OWNER = "ipme"
 GITHUB_REPO = "NavSphere"
 GITHUB_BRANCH = "main"
-NEXTAUTH_URL = "https://nav.atzzz.com/api/auth"
-NEXT_PUBLIC_API_URL="https://nav.atzzz.com"
+NEXTAUTH_URL = "https://xnav.pages.dev/api/auth"
+NEXT_PUBLIC_API_URL="https://xnav.pages.dev/"
 
