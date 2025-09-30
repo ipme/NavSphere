@@ -20,7 +20,7 @@
           "title": "Google Analytics",
           "href": "https://analytics.google.com/",
           "description": "Google分析（Google Analytics）是一个由Google所提供的网站流量统计服务。",
-          "icon": "/assets/images/logos/analytics.ico",
+          "icon": "/assets/images/logos/Analytics.ico",
           "enabled": true
         },
         {
@@ -28,7 +28,7 @@
           "title": "Cloudflare",
           "href": "https://dash.cloudflare.com/",
           "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
-          "icon": "/assets/images/logos/cloudflar.ico",
+          "icon": "/assets/images/logos/CloudFlare.ico",
           "enabled": true
         },
         {
