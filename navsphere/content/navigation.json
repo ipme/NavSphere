@@ -88,7 +88,16 @@
       "icon": "FolderKanban",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1759252374267_772q35rkk",
+          "title": "Lucide",
+          "href": "https://lucide.dev/icons/house",
+          "description": "Beautiful & consistent icon toolkit made by the community.",
+          "icon": "/assets/favicon_1759252362921.png",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
