@@ -85,8 +85,8 @@
     {
       "id": "1759252300039",
       "title": "开发者工具包",
-      "icon": "FolderKanban",
-      "description": "",
+      "icon": "Box",
+      "description": "开发者工具，工具包",
       "enabled": true,
       "items": [
         {
