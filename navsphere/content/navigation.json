@@ -76,7 +76,7 @@
           "title": "PostSpark",
           "href": "https://postspark.app/",
           "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
-          "icon": "/assets/img_1741747241014.png",
+          "icon": "/assets/images/logos/PostSpark.png",
           "enabled": true
         }
       ],
@@ -94,7 +94,7 @@
           "title": "Lucide",
           "href": "https://lucide.dev/icons/house",
           "description": "Beautiful & consistent icon toolkit made by the community.",
-          "icon": "/assets/favicon_1759252362921.png",
+          "icon": "/assets/images/logos/Lucide.png",
           "enabled": true
         }
       ],
