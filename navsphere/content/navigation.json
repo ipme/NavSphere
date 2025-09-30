@@ -81,6 +81,15 @@
       "subCategories": [],
       "description": "",
       "enabled": true
-    } 
+    },
+    {
+      "id": "1759252300039",
+      "title": "开发者工具包",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    }
   ]
 }
