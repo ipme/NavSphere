@@ -12,7 +12,7 @@
           "title": "Vercel",
           "href": "https://vercel.com/",
           "description": "Vercel 提供开发者工具和云基础设施，帮助构建、扩展和保护更快、更个性化的网络应用。",
-          "icon": "/assets/images/logos/vercel.png",
+          "icon": "/assets/images/logos/Vercel.png",
           "enabled": true
         },
         {
@@ -36,7 +36,7 @@
           "title": "Google AdSense",
           "href": "https://www.google.com/adsense/",
           "description": "Google AdSense广告服务。",
-          "icon": "/assets/images/logos/gads.ico",
+          "icon": "/assets/images/logos/AdSense.ico",
           "enabled": true
         },
         {
@@ -44,7 +44,7 @@
           "title": "Producthunt",
           "href": "https://www.producthunt.com/",
           "description": "发现新鲜有趣的产品",
-          "icon": "/assets/images/logos/producthunt.png",
+          "icon": "/assets/images/logos/Product-Hunt.png",
           "enabled": true
         },
         {
@@ -52,7 +52,7 @@
           "title": "Leonardo.AI",
           "href": "https://app.leonardo.ai/",
           "description": "Leonardo.AI是一个人工智能绘图社区和工具。它基于Stable Diffusion人工智能模型,深度集成了其各种插件,提供强大的图片生成和创作功能。",
-          "icon": "/assets/images/logos/leonardo.ico",
+          "icon": "/assets/images/logos/Leonardo-Ai.ico",
           "enabled": true
         },
         {
@@ -60,7 +60,7 @@
           "title": "Tensor.art",
           "href": "https://tensor.art/",
           "description": "Tensor.art是一个免费的在线图像生成和模型托管平台。",
-          "icon": "/assets/images/logos/tensorart.ico",
+          "icon": "/assets/images/logos/Tensor-Art.ico",
           "enabled": true
         },
         {
@@ -68,7 +68,7 @@
           "title": "截图美化工具",
           "href": "https://shots.so/",
           "description": "截图美化，套上不同设备的壳，浏览器、iPhone、iPad、MacBook，Apple Watch",
-          "icon": "/assets/images/logos/shots.webp",
+          "icon": "/assets/images/logos/Shots.webp",
           "enabled": true
         },
         {
