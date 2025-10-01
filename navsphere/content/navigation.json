@@ -129,7 +129,7 @@
             },
             {
               "id": "1739871926277",
-              "title": "perplexity",
+              "title": "Perplexity",
               "href": "https://www.perplexity.ai/",
               "description": "一个人工智能助手，旨在为您提供信息、解答问题和帮助您完成各种任务。",
               "icon": "/assets/images/logos/perplexity.png",
@@ -217,7 +217,7 @@
           "items": [
             {
               "id": "1735265532154",
-              "title": "shadcn ",
+              "title": "Shadcn ",
               "href": "https://ui.shadcn.com/",
               "description": "Build your component library Beautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.",
               "icon": "/assets/images/logos/shadcn.png",
@@ -225,7 +225,7 @@
             },
             {
               "id": "1751433573273",
-              "title": "shadcn ui  Theme",
+              "title": "Shadcn ui  Theme",
               "href": "https://tweakcn.com/",
               "description": "Design Your Perfect shadcn/uiTheme Customize colors, typography, and layouts with a real-time preview. No signup required.",
               "icon": "/assets/images/logos/shadcn-ui-Theme.png",
@@ -258,7 +258,7 @@
             },
             {
               "id": "1735612629450",
-              "title": "netlify",
+              "title": "Netlify",
               "href": "https://www.netlify.com/",
               "description": "Netlify is the essential platform for the delivery of exceptional and dynamic web experiences, without limitations.",
               "icon": "/assets/images/logos/netlify.png",
@@ -275,7 +275,7 @@
           "items": [
             {
               "id": "1736921962115",
-              "title": "draw.io",
+              "title": "Draw.io",
               "href": "https://www.drawio.com/",
               "description": "可以绘制架构图、流程图，软件周期内的其它设计图。为团队绘制安全第一的图表。\n将您的存储带到我们的在线工具，或使用桌面应用程序在本地保存。",
               "icon": "/assets/images/logos/draw-io.png",
@@ -416,7 +416,7 @@
             },
             {
               "id": "1737961258110",
-              "title": "mdnice",
+              "title": "Markdown Nice",
               "href": "https://editor.mdnice.com/",
               "description": "微信公众号样式一键转换，知乎/语雀专属排版优化",
               "icon": "/assets/images/logos/Mdnice.png",
@@ -524,7 +524,7 @@
           "items": [
             {
               "id": "4_1",
-              "title": "photoshop",
+              "title": "PhotoShop",
               "href": "https://www.adobe.com/cn/products/photoshop.html",
               "description": "Photoshop不需要解释",
               "icon": "/assets/images/logos/photoshop.png",
@@ -584,7 +584,7 @@
             },
             {
               "id": "6_2",
-              "title": "principle",
+              "title": "Principle",
               "href": "http://principleformac.com/",
               "description": "Animate Your Ideas, Design Better Apps",
               "icon": "/assets/images/logos/principle.png",
@@ -592,7 +592,7 @@
             },
             {
               "id": "6_3",
-              "title": "flinto",
+              "title": "Flinto",
               "href": "https://www.flinto.com/",
               "description": "Flinto is a Mac app used by top designers around the world to create interactive and animated prototypes of their app designs.",
               "icon": "/assets/images/logos/flinto.png",
@@ -600,7 +600,7 @@
             },
             {
               "id": "6_4",
-              "title": "framer",
+              "title": "Framer",
               "href": "https://framer.com/",
               "description": "Design everything from detailed icons to high-fidelity interactions—all in one place.",
               "icon": "/assets/images/logos/framer.png",
@@ -654,7 +654,7 @@
             },
             {
               "id": "8_1_2",
-              "title": "iconfont",
+              "title": "Iconfont",
               "href": "http://www.iconfont.cn/",
               "description": "阿里巴巴矢量图标库",
               "icon": "/assets/images/logos/iconfont.png",
@@ -662,7 +662,7 @@
             },
             {
               "id": "8_1_3",
-              "title": "iconmonstr",
+              "title": "Iconmonstr",
               "href": "https://iconmonstr.com/",
               "description": "Free simple icons for your next project",
               "icon": "/assets/images/logos/iconmonstr.png",
@@ -694,7 +694,7 @@
             },
             {
               "id": "8_1_8",
-              "title": "flaticon",
+              "title": "Flaticon",
               "href": "https://www.flaticon.com/",
               "description": "634,000+ Free vector icons in SVG, PSD, PNG, EPS format or as ICON FONT.",
               "icon": "/assets/images/logos/flaticon.png",
