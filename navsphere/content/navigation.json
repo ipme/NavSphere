@@ -154,10 +154,10 @@
             },
             {
               "id": "1736911347619",
-              "title": "gamma",
+              "title": "GAMMA",
               "href": "https://gamma.app/",
               "description": "AI生成PPT工具",
-              "icon": "/assets/images/logos/gamma.png",
+              "icon": "/assets/images/logos/Gamma-favicon.svg",
               "enabled": true
             }
           ]
@@ -335,7 +335,7 @@
               "title": "Trae",
               "href": "https://www.trae.ai/",
               "description": "字节新出的 Cursor 竞品 Trae ，可以用 claude3.5，限时免费，它的 Builder 相当于 Cursor 的 Composer 和 Agent 合体，建议默认使用 Builder。",
-              "icon": "/assets/images/logos/trae.png",
+              "icon": "/assets/images/logos/Trae.png",
               "enabled": true
             },
             {
