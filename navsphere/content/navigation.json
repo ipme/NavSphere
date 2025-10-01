@@ -26,7 +26,7 @@
           "title": "Cloudflare",
           "href": "https://dash.cloudflare.com/",
           "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
-          "icon": "/assets/images/logos/cloudflar.ico",
+          "icon": "/assets/images/logos/CloudFlare.ico",
           "enabled": true
         },
         {
@@ -34,7 +34,7 @@
           "title": "Google AdSense",
           "href": "https://www.google.com/adsense/",
           "description": "Google AdSense广告服务。",
-          "icon": "/assets/images/logos/gads.ico",
+          "icon": "/assets/images/logos/Google-AdSense.ico",
           "enabled": true
         },
         {
@@ -50,7 +50,7 @@
           "title": "Leonardo.AI",
           "href": "https://app.leonardo.ai/",
           "description": "Leonardo.AI是一个人工智能绘图社区和工具。它基于Stable Diffusion人工智能模型,深度集成了其各种插件,提供强大的图片生成和创作功能。",
-          "icon": "/assets/images/logos/leonardo.ico",
+          "icon": "/assets/images/logos/Leonardo-Ai.ico",
           "enabled": true
         },
         {
@@ -58,7 +58,7 @@
           "title": "Tensor.art",
           "href": "https://tensor.art/",
           "description": "Tensor.art是一个免费的在线图像生成和模型托管平台。",
-          "icon": "/assets/images/logos/tensorart.ico",
+          "icon": "/assets/images/logos/Tensor-Art.ico",
           "enabled": true
         },
         {
@@ -66,15 +66,15 @@
           "title": "截图美化工具",
           "href": "https://shots.so/",
           "description": "截图美化，套上不同设备的壳，浏览器、iPhone、iPad、MacBook，Apple Watch",
-          "icon": "/assets/images/logos/shots.webp",
+          "icon": "/assets/images/logos/Shots.webp",
           "enabled": true
         },
         {
           "id": "1741747111596",
           "title": "PostSpark",
           "href": "https://postspark.app/",
-          "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
-          "icon": "/assets/img_1741747241014.png",
+          "description": "Beautiful Screenshots and Mockups Cusomizable, eye-catching presentation for any content",
+          "icon": "/assets/images/logos/PostSpark.png",
           "enabled": true
         }
       ],
@@ -132,7 +132,7 @@
               "title": "perplexity",
               "href": "https://www.perplexity.ai/",
               "description": "一个人工智能助手，旨在为您提供信息、解答问题和帮助您完成各种任务。",
-              "icon": "/assets/img_1739871936809.png",
+              "icon": "/assets/images/logos/perplexity.png",
               "enabled": true
             }
           ]
@@ -148,8 +148,8 @@
               "id": "1736418296509",
               "title": "Napkin",
               "href": "https://www.napkin.ai/",
-              "description": "Napkin turns your text into visuals so sharing your ideas is quick and effective.\n\nNapkin 能够将你的文本转化为视觉内容，使分享你的想法变得快速而有效。",
-              "icon": "/assets/img_1736418335098.png",
+              "description": "Napkin turns your text into visuals so sharing your ideas is quick and effective.Napkin 能够将你的文本转化为视觉内容，使分享你的想法变得快速而有效。",
+              "icon": "/assets/images/logos/Napkin.png",
               "enabled": true
             },
             {
@@ -157,7 +157,7 @@
               "title": "gamma",
               "href": "https://gamma.app/",
               "description": "AI生成PPT工具",
-              "icon": "/assets/img_1736911490095.png",
+              "icon": "/assets/images/logos/gamma.png",
               "enabled": true
             }
           ]
@@ -174,7 +174,7 @@
               "title": "MCP Server 集合站",
               "href": "https://smithery.ai/",
               "description": "各种各样的 MCP Server",
-              "icon": "/assets/img_1752554273115.png",
+              "icon": "/assets/images/logos/MCP Server.png",
               "enabled": true
             }
           ]
@@ -202,8 +202,8 @@
               "id": "1750831228317",
               "title": "lucide",
               "href": "https://lucide.dev/icons/house",
-              "description": "Beautiful &\nconsistent icons",
-              "icon": "/assets/img_1750831362985.png",
+              "description": "Beautiful & consistent icons",
+              "icon": "/assets/images/logos/lucide.png",
               "enabled": true
             }
           ]
@@ -219,16 +219,16 @@
               "id": "1735265532154",
               "title": "shadcn ",
               "href": "https://ui.shadcn.com/",
-              "description": "Build your component library\nBeautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.",
-              "icon": "/assets/img_1735265752690.png",
+              "description": "Build your component library Beautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.",
+              "icon": "/assets/images/logos/shadcn.png",
               "enabled": true
             },
             {
               "id": "1751433573273",
               "title": "shadcn ui  Theme",
               "href": "https://tweakcn.com/",
-              "description": "Design Your Perfect \nshadcn/ui\n Theme\nCustomize colors, typography, and layouts with a real-time preview. No signup required.",
-              "icon": "/assets/img_1751433579053.png",
+              "description": "Design Your Perfect shadcn/uiTheme Customize colors, typography, and layouts with a real-time preview. No signup required.",
+              "icon": "/assets/images/logos/shadcn-ui-Theme.png",
               "enabled": true
             }
           ]
@@ -245,7 +245,7 @@
               "title": "Cloudflare",
               "href": "https://dash.cloudflare.com/",
               "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
-              "icon": "/assets/images/logos/cloudflar.ico",
+              "icon": "/assets/images/logos/cloudflare.ico",
               "enabled": true
             },
             {
@@ -261,7 +261,7 @@
               "title": "netlify",
               "href": "https://www.netlify.com/",
               "description": "Netlify is the essential platform for the delivery of exceptional and dynamic web experiences, without limitations.",
-              "icon": "/assets/img_1735612745862.png",
+              "icon": "/assets/images/logos/netlify.png",
               "enabled": true
             }
           ]
@@ -278,7 +278,7 @@
               "title": "draw.io",
               "href": "https://www.drawio.com/",
               "description": "可以绘制架构图、流程图，软件周期内的其它设计图。为团队绘制安全第一的图表。\n将您的存储带到我们的在线工具，或使用桌面应用程序在本地保存。",
-              "icon": "/assets/img_1736922080517.png",
+              "icon": "/assets/images/logos/draw-io.png",
               "enabled": true
             },
             {
@@ -286,15 +286,15 @@
               "title": "ProccessOn",
               "href": "https://www.processon.com/",
               "description": "ProccessOn是一款优秀的国产在线协作画图软件，非常好用，也非常漂亮。专业强大的作图工具，支持多人实时在线协作，可用于原型图、UML、BPMN、网络拓扑图等多种图形绘制\n",
-              "icon": "/assets/img_1736922262462.png",
+              "icon": "/assets/images/logos/ProccessOn.png",
               "enabled": true
             },
             {
               "id": "1736922380901",
               "title": "Excalidraw",
               "href": "https://excalidraw.com/",
-              "description": "Excalidraw是免费的在线协作画图工具。\n\n手写风格的草图非常好看；\n漂亮的图库。",
-              "icon": "/assets/img_1736922499401.png",
+              "description": "Excalidraw是免费的在线协作画图工具。手写风格的草图非常好看；漂亮的图库。",
+              "icon": "/assets/images/logos/Excalidraw.png",
               "enabled": true
             }
           ]
@@ -311,15 +311,15 @@
               "title": "Cursor",
               "href": "https://www.cursor.com/",
               "description": "The AI Code Editor Built to make you extraordinarily productive, Cursor is the best way to code with AI.",
-              "icon": "/assets/img_1737529713172.png",
+              "icon": "/assets/images/logos/cursor.png",
               "enabled": true
             },
             {
               "id": "1737529752867",
               "title": "Windsurf",
               "href": "https://codeium.com/",
-              "description": "Introducing the Windsurf Editor\nThe new purpose-built IDE to harness magic",
-              "icon": "/assets/img_1737529843741.png",
+              "description": "Introducing the Windsurf Editor The new purpose-built IDE to harness magic",
+              "icon": "/assets/images/logos/Windsurf.png",
               "enabled": true
             },
             {
@@ -327,23 +327,23 @@
               "title": "GitHub Copilot",
               "href": "https://github.com/features/copilot",
               "description": "The AI editor for everyone",
-              "icon": "/assets/img_1737530043708.png",
+              "icon": "/assets/images/logos/GitHub-Copilot.png",
               "enabled": true
             },
             {
               "id": "1737530051856",
               "title": "Trae",
               "href": "https://www.trae.ai/",
-              "description": "字节新出的 Cursor 竞品 Trae ，可以用 claude3.5，限时免费\n，它的 Builder 相当于 Cursor 的 Composer 和 Agent 合体，建议默认使用 Builder。",
-              "icon": "/assets/img_1737530421138.png",
+              "description": "字节新出的 Cursor 竞品 Trae ，可以用 claude3.5，限时免费，它的 Builder 相当于 Cursor 的 Composer 和 Agent 合体，建议默认使用 Builder。",
+              "icon": "/assets/images/logos/trae.png",
               "enabled": true
             },
             {
               "id": "1752662613676",
               "title": "Kiro",
               "href": "https://kiro.dev/",
-              "description": "The AI IDE for prototype to production\n",
-              "icon": "/assets/img_1752662633580.png",
+              "description": "The AI IDE for prototype to production",
+              "icon": "/assets/images/logos/Kiro.png",
               "enabled": true
             },
             {
@@ -351,7 +351,7 @@
               "title": "Claude code",
               "href": "https://www.anthropic.com/claude-code",
               "description": "Unleash Claude’s raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.",
-              "icon": "/assets/img_1752662771107.png",
+              "icon": "/assets/images/logos/Cloude-code.png",
               "enabled": true
             }
           ]
@@ -378,7 +378,7 @@
               "title": "公众号助手",
               "href": "https://mp.weixin.qq.com/",
               "description": "公众号管理平台",
-              "icon": "/assets/img_1736913249592.png",
+              "icon": "/assets/images/logos/WeChat-MP.png",
               "enabled": true
             },
             {
@@ -386,7 +386,7 @@
               "title": "视频号助手",
               "href": "https://channels.weixin.qq.com",
               "description": "视频号助手，视频号创作站点",
-              "icon": "/assets/img_1736912962033.png",
+              "icon": "/assets/images/logos/WeChat-channels.png",
               "enabled": true
             },
             {
@@ -394,7 +394,7 @@
               "title": "小红书创作中心",
               "href": "https://creator.xiaohongshu.com/",
               "description": "小红书创作中心",
-              "icon": "/assets/img_1736912766835.png",
+              "icon": "/assets/images/logos/XiaoHongShu.png",
               "enabled": true
             }
           ]
@@ -411,7 +411,7 @@
               "title": "WeChat Markdown Editor",
               "href": "https://doocs.github.io/md/",
               "description": "WeChat Markdown Editor | 一款高度简洁的微信 Markdown 编辑器：支持 Markdown 语法、色盘取色、多图上传、一键下载文档、自定义 CSS 样式、一键重置等特性",
-              "icon": "/assets/img_1735433660193.png",
+              "icon": "/assets/images/logos/WeChat-Markdown-Editor.png",
               "enabled": true
             },
             {
@@ -419,7 +419,7 @@
               "title": "mdnice",
               "href": "https://editor.mdnice.com/",
               "description": "微信公众号样式一键转换，知乎/语雀专属排版优化",
-              "icon": "/assets/img_1737961266055.png",
+              "icon": "/assets/images/logos/Mdnice.png",
               "enabled": true
             }
           ]
@@ -436,7 +436,7 @@
               "title": "Screenity",
               "href": "https://screenity.io/",
               "description": "开源免费的 chrome 录屏插件。",
-              "icon": "/assets/img_1753395904831.png",
+              "icon": "/assets/images/logos/Screenity.png",
               "enabled": true
             },
             {
@@ -444,7 +444,7 @@
               "title": "Cursorful",
               "href": "https://cursorful.com/",
               "description": "具有自动缩放功能的屏幕录像 使用 Cursorful 浏览器扩展程序录制精美的屏幕录像跟随光标缩放或在编辑器中加载您自己的视频并可以手动添加缩放。",
-              "icon": "/assets/img_1753396105178.png",
+              "icon": "/assets/images/logos/Cursorful.png",
               "enabled": true
             }
           ]
@@ -509,7 +509,7 @@
               "title": "ScreenShots.pro",
               "href": "https://screenshots.pro/",
               "description": "App Screenshot Generator for App Store&Google Play,Create panoramic screenshots for iOS and Android apps. No account needed.",
-              "icon": "/assets/img_1735258064656.png",
+              "icon": "/assets/images/logos/ScreenShots-pro.png",
               "enabled": true
             }
           ],
