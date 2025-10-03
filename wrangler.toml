@@ -10,4 +10,3 @@ GITHUB_REPO = "NavSphere"
 GITHUB_BRANCH = "main"
 NEXTAUTH_URL = "https://xnav.pages.dev/api/auth"
 NEXT_PUBLIC_API_URL="https://xnav.pages.dev/"
-
