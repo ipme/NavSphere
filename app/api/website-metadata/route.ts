@@ -34,7 +34,7 @@ export async function POST(request: Request) {
             try {
                 const iconUrl = await downloadAndUploadIcon(metadata.icon, session.user.accessToken)
                 metadata.icon = iconUrl
-               
+
             } catch (error) {
                 console.warn('Failed to download icon:', error)
                 // 如果图标下载失败，尝试使用 Google favicon 服务
@@ -320,7 +320,7 @@ async function uploadImageToGitHub(binaryData: Uint8Array, token: string, extens
     const githubPath = 'public' + path
 
     // Convert Uint8Array to Base64
-    const base64String = Buffer.from(binaryData).toString('base64')
+    const base64String = uint8ArrayToBase64(binaryData)
     const currentFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${githubPath}?ref=${branch}`
 
     const response = await fetch(currentFileUrl, {
@@ -346,4 +346,13 @@ async function uploadImageToGitHub(binaryData: Uint8Array, token: string, extens
     const commitHash = responseData.commit.sha
 
     return { path, commitHash }
+}
+
+function uint8ArrayToBase64(bytes: Uint8Array): string {
+    let binary = '';
+    const len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return btoa(binary);
 }

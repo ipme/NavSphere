@@ -41,6 +41,16 @@ export async function getFileContent(path: string) {
   }
 }
 
+
+function toBase64(str: string) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
+}
+
 export async function commitFile(
   path: string,
   content: string,
@@ -85,7 +95,7 @@ export async function commitFile(
         },
         body: JSON.stringify({
           message,
-          content: Buffer.from(content).toString('base64'),
+          content: toBase64(content),
           sha,
           branch,
         }),
@@ -93,7 +103,7 @@ export async function commitFile(
 
       if (!response.ok) {
         const error = await response.json()
-        if (attempt < retryCount && error.message?.includes('sha')) {
+        if (attempt < retryCount && (error.message?.includes('sha') || error.message?.includes('conflict'))) {
           console.log(`Attempt ${attempt} failed, retrying after delay...`)
           await delay(1000 * attempt) // 指数退避
           continue
