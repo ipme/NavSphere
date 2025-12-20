@@ -280,9 +280,6 @@ importers:
       shadcn:
         specifier: ^2.10.0
         version: 2.10.0(@types/node@20.4.5)(typescript@5.1.6)
-      sharp:
-        specifier: ^0.34.5
-        version: 0.34.5
       tailwindcss:
         specifier: 4.1.12
         version: 4.1.12
@@ -4883,7 +4880,8 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@img/colour@1.0.0': {}
+  '@img/colour@1.0.0':
+    optional: true
 
   '@img/sharp-darwin-arm64@0.34.5':
     optionalDependencies:
@@ -6798,7 +6796,8 @@ snapshots:
 
   detect-libc@2.0.4: {}
 
-  detect-libc@2.1.2: {}
+  detect-libc@2.1.2:
+    optional: true
 
   detect-node-es@1.1.0: {}
 
@@ -8650,6 +8649,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.5
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
+    optional: true
 
   shebang-command@2.0.0:
     dependencies:
