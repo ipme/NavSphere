@@ -1,7 +1,10 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import Editor from '@monaco-editor/react'
+import { useEffect, useRef, useState, useCallback } from 'react'
+import CodeMirror from '@uiw/react-codemirror'
+import { json } from '@codemirror/lang-json'
+import { githubLight, githubDark } from '@uiw/codemirror-theme-github'
+import { EditorView, keymap } from '@codemirror/view'
 import { useTheme } from 'next-themes'
 
 interface JsonEditorProps {
@@ -14,117 +17,93 @@ interface JsonEditorProps {
   stats?: { categories: number; items: number; size: number }
 }
 
-export function JsonEditor({ 
-  value, 
-  onChange, 
-  disabled = false, 
+export function JsonEditor({
+  value,
+  onChange,
+  disabled = false,
   height = '500px',
   onValidate,
   isValid = true,
   stats
 }: JsonEditorProps) {
   const { theme } = useTheme()
-  const editorRef = useRef<any>(null)
+  const [view, setView] = useState<EditorView | null>(null)
 
-  const handleEditorDidMount = (editor: any, monaco: any) => {
-    editorRef.current = editor
-
-    // 配置JSON语言特性
-    monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-      validate: true,
-      allowComments: false,
-      schemas: [],
-      enableSchemaRequest: false,
-    })
-
-    // 设置编辑器选项
-    editor.updateOptions({
-      fontSize: 14,
-      fontFamily: 'JetBrains Mono, Consolas, Monaco, "Courier New", monospace',
-      lineNumbers: 'on',
-      minimap: { enabled: false },
-      scrollBeyondLastLine: false,
-      wordWrap: 'on',
-      automaticLayout: true,
-      tabSize: 2,
-      insertSpaces: true,
-      formatOnPaste: true,
-      formatOnType: true,
-      folding: true,
-      bracketPairColorization: { enabled: true },
-      guides: {
-        bracketPairs: true,
-        indentation: true,
-      },
-      suggest: {
-        showKeywords: true,
-        showSnippets: true,
-      },
-      quickSuggestions: {
-        other: true,
-        comments: false,
-        strings: true,
-      },
-    })
-
-    // 监听内容变化
-    editor.onDidChangeModelContent(() => {
-      const currentValue = editor.getValue()
-      onChange(currentValue)
-      
-      // 验证JSON格式
-      if (onValidate) {
-        try {
-          JSON.parse(currentValue)
-          onValidate(true, [])
-        } catch (error) {
-          onValidate(false, [(error as Error).message])
-        }
+  // Custom keymaps
+  const customKeymap = keymap.of([
+    {
+      key: 'Mod-s',
+      run: () => {
+        const event = new CustomEvent('monaco-save')
+        window.dispatchEvent(event)
+        return true
       }
-    })
-
-    // 添加键盘快捷键
-    editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
-      // 触发保存事件
-      const event = new CustomEvent('monaco-save')
-      window.dispatchEvent(event)
-    })
-
-    editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyR, () => {
-      // 触发刷新事件
-      const event = new CustomEvent('monaco-refresh')
-      window.dispatchEvent(event)
-    })
-
-    editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyD, () => {
-      // 触发下载事件
-      const event = new CustomEvent('monaco-download')
-      window.dispatchEvent(event)
-    })
-
-    // 格式化快捷键
-    editor.addCommand(monaco.KeyMod.Alt | monaco.KeyMod.Shift | monaco.KeyCode.KeyF, () => {
-      editor.getAction('editor.action.formatDocument').run()
-    })
-  }
-
-  // 格式化JSON
-  const formatJson = () => {
-    if (editorRef.current) {
-      editorRef.current.getAction('editor.action.formatDocument').run()
+    },
+    {
+      key: 'Mod-r',
+      run: () => {
+        const event = new CustomEvent('monaco-refresh')
+        window.dispatchEvent(event)
+        return true
+      }
+    },
+    {
+      key: 'Mod-d',
+      run: () => {
+        const event = new CustomEvent('monaco-download')
+        window.dispatchEvent(event)
+        return true
+      }
+    },
+    {
+      key: 'Alt-Shift-f',
+      run: () => {
+        formatJson()
+        return true
+      }
     }
-  }
+  ])
 
-  // 暴露格式化方法
+  // Validation logic
+  const validate = useCallback((val: string) => {
+    if (onValidate) {
+      try {
+        JSON.parse(val)
+        onValidate(true, [])
+      } catch (error) {
+        onValidate(false, [(error as Error).message])
+      }
+    }
+  }, [onValidate])
+
+  const handleChange = useCallback((val: string) => {
+    onChange(val)
+    validate(val)
+  }, [onChange, validate])
+
+  // Format JSON function
+  const formatJson = useCallback(() => {
+    try {
+      const currentVal = value
+      const parsed = JSON.parse(currentVal)
+      const formatted = JSON.stringify(parsed, null, 2)
+      onChange(formatted)
+    } catch (e) {
+      // Ignore format error if invalid JSON
+      console.warn('Cannot format invalid JSON')
+    }
+  }, [value, onChange])
+
+  // Listen for format event
   useEffect(() => {
     const handleFormat = () => formatJson()
     window.addEventListener('monaco-format', handleFormat)
     return () => window.removeEventListener('monaco-format', handleFormat)
-  }, [])
+  }, [formatJson])
 
   return (
-    <div className="border rounded-lg overflow-hidden">
-      {/* 编辑器工具栏 */}
+    <div className="border rounded-lg overflow-hidden flex flex-col">
+      {/* Toolbar */}
       <div className="flex items-center justify-between px-3 py-2 bg-muted/50 border-b">
         <div className="flex items-center gap-3 text-sm">
           <span className="text-muted-foreground">navigation.json</span>
@@ -133,7 +112,7 @@ export function JsonEditor({
               {value.split('\n').length} 行 · {value.length} 字符
             </span>
           )}
-          {/* JSON状态显示 */}
+          {/* JSON Status */}
           <div className="flex items-center gap-1">
             {isValid ? (
               <>
@@ -169,29 +148,23 @@ export function JsonEditor({
         </div>
       </div>
 
-      {/* Monaco Editor */}
-      <Editor
-        height={height}
-        defaultLanguage="json"
+      {/* CodeMirror Editor */}
+      <CodeMirror
         value={value}
-        theme={theme === 'dark' ? 'vs-dark' : 'vs'}
-        onMount={handleEditorDidMount}
-        options={{
-          readOnly: disabled,
-          contextmenu: true,
-          selectOnLineNumbers: true,
-          roundedSelection: false,
-          cursorStyle: 'line',
-          automaticLayout: true,
+        height={height}
+        theme={theme === 'dark' ? githubDark : githubLight}
+        extensions={[json(), customKeymap, EditorView.lineWrapping]}
+        onChange={handleChange}
+        onCreateEditor={(view) => setView(view)}
+        editable={!disabled}
+        basicSetup={{
+          lineNumbers: true,
+          foldGutter: true,
+          highlightActiveLine: true,
+          autocompletion: true,
+          tabSize: 2,
         }}
-        loading={
-          <div className="flex items-center justify-center h-full">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-              <span>加载编辑器...</span>
-            </div>
-          </div>
-        }
+        className="text-sm"
       />
     </div>
   )
