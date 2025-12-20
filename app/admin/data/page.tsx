@@ -1,10 +1,14 @@
 'use client'
-export const runtime = 'edge'
+// export const runtime = 'edge'
 
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { JsonEditor } from "@/components/ui/json-editor"
+import dynamic from 'next/dynamic'
+const JsonEditor = dynamic(() => import("@/components/ui/json-editor").then(mod => mod.JsonEditor), {
+  ssr: false,
+  loading: () => <div className="h-[500px] border rounded-lg bg-muted/10 animate-pulse" />
+})
 import { useToast } from "@/components/ui/use-toast"
 import {
   Download,

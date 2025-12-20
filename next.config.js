@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Docker 部署支持
-  output: 'standalone',
-  
+  // output: 'standalone',
+
   images: {
     domains: [
       'dash.cloudflare.com',
